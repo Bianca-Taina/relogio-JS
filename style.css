@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #020611 0%, #000 100%);
+  color: #00eaff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.clock {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 60px 80px;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.2),
+    inset 0 0 40px rgba(0, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.time {
+  font-size: 5rem;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 20px #00ffff,
+    0 0 40px #00aaff;
+}
+
+.date {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #80f7ff;
+  text-shadow: 0 0 10px rgba(0,255,255,0.4);
+}
+
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0,255,255,0.2) 0%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(80px);
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+
+button {
+  margin-top: 40px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  color: #00eaff;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+
+.low-glow .glow {
+  opacity: 0.1;
+}
+
+.low-glow .time {
+  text-shadow: 0 0 6px #00ffff;
+}
